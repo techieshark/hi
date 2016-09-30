@@ -1,0 +1,12 @@
+{
+    "use": ["postcss-import", "autoprefixer", "cssnano"],
+    "input": "css/stage3.css",
+    "output": "css/min.css",
+    "local-plugins": true,
+    "autoprefixer": {
+        "browsers": ["defaults", "ios > 6"]
+    },
+    "uncss": {
+        "html": ["./index.html"]
+    }
+}

@@ -1,0 +1,39 @@
+@keyframes prep {
+    0% {
+        transform: translate(-150%);
+    }
+    100% {
+         transform: translate(-150%);
+    }
+}
+
+@keyframes slide {
+    0% {
+        transform:translate(-150%) skew(50deg); }
+    50% {
+        transform: skew(-10deg); }
+    75% {
+        transform: skew(10deg); }
+    100% {
+        transform:translate(0%) skew(0deg);}
+}
+
+@keyframes shadowSquiggle {
+    0% {
+        transform: skew(0deg); }
+    50% {
+        transform: skew(-8deg); }
+    75% {
+        transform: skew(4deg); }
+    100% {
+        transform: skew(-0deg); }
+}
+
+
+.hello:before {
+    animation: prep 1s, shadowSquiggle 1.5s ease-in-out 1s;
+}
+
+.hello {
+    animation: prep 1s, slide 1.5s ease-in-out 1s;
+}

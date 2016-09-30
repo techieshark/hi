@@ -1,0 +1,34 @@
+{
+  "name": "hello-site",
+  "version": "1.0.0",
+  "description": "small website",
+  "main": "index.js",
+  "dependencies": {
+    "clean-css": "^3.4.19",
+    "purify-css": "^1.1.9"
+  },
+  "devDependencies": {
+    "css-mqpacker": "^5.0.1",
+    "cssnano": "^3.7.5",
+    "eslint": "^3.6.1",
+    "eslint-config-standard": "^6.2.0",
+    "eslint-plugin-promise": "^2.0.1",
+    "eslint-plugin-standard": "^2.0.1",
+    "postcss-import": "^8.1.2",
+    "postcss-uncss": "^0.14.0",
+    "uncss": "^0.14.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/techieshark/itsbypw.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/techieshark/itsbypw/issues"
+  },
+  "homepage": "https://github.com/techieshark/itsbypw#readme"
+}

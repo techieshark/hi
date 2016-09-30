@@ -1,0 +1,578 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+}
+
+.wrapper {
+    width: 90%;
+    margin: 0 5%;
+}
+
+/* ===================
+    ALL: Orange Theme
+   =================== */
+
+.header-container {
+    border-bottom: 20px solid #e44d26;
+}
+
+.footer-container,
+.main aside {
+    border-top: 20px solid #e44d26;
+}
+
+.header-container,
+.footer-container,
+.main aside {
+    background: #f16529;
+}
+
+.title {
+    color: white;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+nav a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 15px 0;
+
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+
+    color: white;
+    background: #e44d26;
+}
+
+nav a:hover,
+nav a:visited {
+    color: white;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.main {
+    padding: 30px 0;
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+article.cv {
+    margin: 0 10%;
+}
+
+/*------------------\\\ GLOBAL ///------------------*/
+
+section {
+        margin: 50px 0;
+        margin: 2em 0;
+    }
+
+    section h1 {
+        /*font-family: NW;*/ /* Norwester; */
+        color: #77b7d8;
+        /*color: #333;*/
+        font-family: Helvetica, Helvetica Neue, Arial, sans-serif;
+    }
+
+@font-face {
+    font-family: "NW";
+    src: url('nw.woff2') format('woff2');
+}
+
+
+/*------------------\\\ INTRO ///------------------*/
+
+
+
+
+
+    .hello, .hello:before {
+        transform-origin: bottom;
+    }
+    .hello:before {
+        content: "hello.";
+        position: absolute;
+        color: red;
+        z-index: -1;
+    }
+
+    .hello {
+        font-family: NW, sans-serif;
+        font-size: 4.5em; /* 4.5 * 16px = 72px */
+        font-weight: 400;
+        font-style: normal;
+        color: #77b7d8;
+        /*text-shadow: 0px 0px 1px #08212f;*/
+        /*color: #007FAA;*/  /* somewhat similar but WCAG AA safe; thx colorsafe.co */
+
+        display: inline-block;
+        border-bottom: 40px solid yellow;
+        border-bottom: 0.36em solid yellow;
+
+        margin: 0.5em 0 0.25em 0;
+        margin-left: -8px; /* account for space between left edge of first character and left of block */
+
+        line-height: 0.7em;
+    }
+
+    .intro p {
+        font-style: italic;
+        font-family: palatino, Baskerville, "Hoefler Text", Garamond, "Times New Roman", Georgia, serif;
+
+        /* min/default font size + line height for browsers sans media queries or calc(): */
+        /* larger sizes are set in media queries below */
+        font-size: 21px;
+        line-height: 1.42;
+    }
+
+    /* elsewhere, set the default size for very small screens & those w/o media queries.
+       here, smoothly scale font size on screens between 220px width and 500px width.
+    /* technique from http://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/
+       but updated to use ems.
+       Using 220px min to catch just about everything - see http://viewportsizes.com */
+    @media (min-width: 220px) { /* lower gate */
+      .hello {
+        /* scale between 72px (4.5em) and 160px (10em) */
+        /* window: 220px to 500px (13.75 em - 31.25em) */
+        font-size: calc(4.5em + (10 - 4.5) * ( (100vw - 13.75em) / ( 31.25 - 13.75) ));
+      }
+
+      .intro p {
+        /* scale from 21px = 21px/16px = 1.3125 rem up to 27px = 27/16 = 1.6875rem palantino */
+        font-size: calc(1.3125rem + (1.6875 - 1.3125) * ( (100vw - 13.75em) / ( 31.25 - 13.75) ));
+        /* scale from 1.42 em (n.b.! not rem) to 1.7 em line spacing */
+        line-height: calc(1.42em + (1.7 - 1.42) * ( (100vw - 13.75em) / ( 31.25 - 13.75) ));
+        /* note: equation is generally calc(lower_bound + scale_max * scale_window); */
+      }
+    }
+    @media (min-width: 500px) { /* upper gate */
+        .hello {
+            /* don't get bigger than this */
+            font-size: 10em;
+        }
+
+        .intro p {
+            font-size: 1.6875rem;
+            line-height: 1.7;
+        }
+    }
+
+
+
+/*------------------\\\ CLIENTS ///------------------*/
+
+.clients ul {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+    .clients li {
+      padding-left: 1em;
+      text-indent: -1em;
+      padding-right: 1em;
+    }
+
+    .clients li:before {
+        content: "\2735"; /* replace bullet with star ✵ */
+         padding-right: 5px;
+         padding-right: 8px;
+         padding-right: 7px;
+    }
+    .clients a {
+        text-decoration: none;
+        position: relative;
+        /*color: #333;*/
+        color: #2c424e;
+        /* darken header blue */
+        transition: color .3s;
+        padding-left: 1em;
+        padding-right: 1em;
+    }
+    .clients a:visited {
+        color: #547E96; /* a bit lighter */
+    }
+        .clients a::before {
+            content: " ";
+            background: transparent;
+            position: absolute;
+            width: 100%;
+            transform: skew(-12deg);
+            left: 0;
+            z-index: -1;
+            height: 26px;
+            transition: all .3s;
+        }
+        .clients a:hover::before {
+            background: #b1ff05;
+        }
+
+@media (min-width: 768px) {
+
+    .clients ul {
+        list-style: none;
+        padding-left: 0;
+        position: relative;
+        margin-left: -20px;
+    }
+    .clients ul:before {
+        content: " ";
+        position: absolute;
+        height: 100%;
+        background: white;
+        width: 20px; /* just wider than bullets */
+        margin-left: -20px; /* match margin-left of .clients ul */
+    }
+        .clients li {
+            display: inline-block;
+            padding-left: 0;
+        }
+}
+
+.clients h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+}
+
+/*------------------\\\ CONTACT ///------------------*/
+
+    .contact h1 {
+
+    }
+
+
+    ul.social {
+        padding: 0;
+        text-align: center;
+    }
+        .social li
+        {
+            display: inline;
+            list-style-type: none;
+            padding: 10px;
+        }
+        .social a {
+            text-decoration: none;
+        }
+        .social span {
+            display: none;
+        }
+        .social svg {
+            max-width: 3em;
+            min-width: 30px;
+            fill: Gray;
+            transition: fill 0.25s;
+        }
+        .social svg:hover {
+            fill: #77b7d8;
+        }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 480px) {
+
+/* ====================
+    INTERMEDIATE: Menu
+   ==================== */
+
+    nav a {
+        float: left;
+        width: 27%;
+        margin: 0 1.7%;
+        padding: 25px 2%;
+        margin-bottom: 0;
+    }
+
+    nav li:first-child a {
+        margin-left: 0;
+    }
+
+    nav li:last-child a {
+        margin-right: 0;
+    }
+
+/* ========================
+    INTERMEDIATE: IE Fixes
+   ======================== */
+
+    nav ul li {
+        display: inline;
+    }
+
+    .oldie nav a {
+        margin: 0 0.7%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+
+/* ====================
+    WIDE: CSS3 Effects
+   ==================== */
+
+    .header-container,
+    .main aside {
+        -webkit-box-shadow: 0 5px 10px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
+    }
+
+/* ============
+    WIDE: Menu
+   ============ */
+
+    .title {
+        float: left;
+    }
+
+    nav {
+        float: right;
+        width: 38%;
+    }
+
+/* ============
+    WIDE: Main
+   ============ */
+
+    .main article {
+        float: left;
+        width: 57%;
+    }
+
+    .main aside {
+        float: right;
+        width: 28%;
+    }
+}
+
+@media only screen and (min-width: 1140px) {
+
+/* ===============
+    Maximal Width
+   =============== */
+
+    .wrapper {
+        width: 1026px; /* 1140px - 10% for margins */
+        margin: 0 auto;
+    }
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+
+    .hello {
+        margin: 0.2em 0;
+        color: gray !important;
+        border-bottom: none;
+    }
+}
+
