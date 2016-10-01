@@ -174,7 +174,8 @@ section {
 
 @font-face {
     font-family: "NW";
-    src: url('nw.woff2') format('woff2');
+    src: url('nw.woff2') format('woff2'),
+         url('nw.woff') format('woff');
 }
 
 
