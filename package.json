@@ -4,7 +4,7 @@
   "description": "small website",
   "main": "index.js",
   "dependencies": {
-    "clean-css": "^3.4.19",
+    "clean-css": ">=4.1.11",
     "purify-css": "^1.1.9"
   },
   "devDependencies": {
