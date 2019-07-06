@@ -2,7 +2,7 @@
 server:
 	 npx http-server -g
 
-ngrok: 
+ngrok:
 	ngrok http 8000
 
 mincss:
@@ -33,4 +33,3 @@ build:
 clean:
 	rm css/stage?.css
 	rm index-uncss*
-
