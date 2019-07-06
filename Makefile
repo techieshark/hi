@@ -6,7 +6,7 @@ ngrok:
 	ngrok http 8000
 
 mincss:
-	cd css && cat normalize.css main.css | cleancss -o min.css
+	cd css && cat normalize.css main.css | npx cleancss -o min.css
 
 # node install -g html-minifier
 # options based on config at http://kangax.github.io/html-minifier/ except remove-tag-whitespace isn't used
@@ -22,10 +22,10 @@ build:
 	sed -e 's/min/stage1/g' -i .bk index-uncss.html
 
 	cat css/normalize.css css/main.css > css/stage1.css
-	uncss index-uncss.html > css/stage2.css
+	npx uncss index-uncss.html > css/stage2.css
 
 	cat css/stage2.css css/animation.css > css/stage3.css
-	postcss -c postcss.json
+	npx postcss -c postcss.json
 
 	make minhtml
 
