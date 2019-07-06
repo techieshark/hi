@@ -1,6 +1,6 @@
 
 server:
-	 python GzipSimpleHTTPServer.py --encoding=gzip
+	 npx http-server -g
 
 ngrok: 
 	ngrok http 8000
